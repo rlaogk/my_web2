@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+:root{
+    --red-color:#fc221c;
+}
+
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./baby-food-img/cover.jpg); 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lora', serif;
+}
+
+/* 전체영역 */
+#wrapper{width: 1025; margin: 0 auto; }
+#header{width: 100%; margin: 0 auto; height: 150px; }
+#section{width: 100%; margin: 0 auto; height: 250px; }
+#footer{width: 100%; margin: 0 auto; height: 100px;}
+
+/* wrapper */
+#wrapper{
+    position: relative;
+    top: 80px;
+    display: block;     
+}
+/* header */
+#header{
+    text-align: center;
+    font-size: 40px;
+    color: var(--red-color);
+}
+/* section */
+#section{
+    display: flex;
+    flex-direction: column;
+}
+#section > p{
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    color: var(--red-color);
+}
+#info{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 45px;
+    display: inline-flex;
+}
+#info > .email > input{
+    width: 270px;
+    height: 60px;
+    border: 1px solid lightgray;
+}
+.email > input::placeholder{
+    padding-left: 25px;
+    color: lightgray;
+    font-size: 12px;
+}
+.btn{
+    margin-left: 10px;
+}
+.btn > button{
+    width: 110px;
+    height: 60px;
+    border: none;
+    background-color: #fc221c;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* footer */
+#footer{
+    text-align: center;
+    font-size: 28px;
+}
+#footer > .icon > i{
+    cursor: pointer;
+}
+#footer > .icon > i:last-child{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+/* 미디어쿼리 */
+
+/* 모바일 768px 미만 */
+@media (max-width: 767px){
+    body{
+        background-image: url(./baby-food-img/cover.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+    #wrapper{width: 100%;}
+    #header{height: 100px; font-size: 23px;}
+    #section{height: 200px; }
+    #footer{height: 100px;}
+    #footer .icon > i{font-size: 20px;}
+    #section > p {font-size: 18px;}
+    #info > .email > input{ width: 230px;
+} 
+
+/* 태블릿 768px ~ 1024px 사이 */
+@media (min-width: 768px) and (max-width: 1024px){
+    body{
+        background-image: url(./baby-food-img/cover.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+    #wrapper{width: 100%;}
+}
+
+/* 데스크탑 1024px 이상 */
+@media (min-width: 1025px){
+    body{
+        background-image: url(./baby-food-img/cover.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+    #wrapper{width: 95%;}
+} 
